@@ -1,0 +1,43 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Sign Up Form by Colorlib
+  // Font Icon
+  link(rel='stylesheet' href='fonts_register/material-icon/css/material-design-iconic-font.min.css')
+  // Main css
+  link(rel='stylesheet' href='css_register/style.css')
+.main
+  .container
+    .signup-content
+      form#signup-form.signup-form(method='POST')
+        h2 Sign up 
+        p.desc
+          | to get discount 10% when pre - order 
+          span &ldquo;Batman Beyond&rdquo;
+        .form-group
+          input#name.form-input(type='text' name='name' placeholder='Your Name')
+        .form-group
+          input#email.form-input(type='email' name='email' placeholder='Email')
+        .form-group
+          input#password.form-input(type='text' name='password' placeholder='Password')
+          span.zmdi.zmdi-eye.field-icon.toggle-password(toggle='#password')
+        .form-group
+          input#agree-term.agree-term(type='checkbox' name='agree-term')
+          label.label-agree-term(for='agree-term')
+        .form-group
+          input#address.form-input(type='text' name='address' placeholder='Address')
+        .form-group
+          input#phonenumber.form-input(type='text' name='phonenumber' placeholder='PhoneNumber')
+            span
+              span
+            | I agree all statements in  
+            a.term-service(href='#') Terms of service
+        .form-group
+          input#submit.form-submit.submit(type='submit' name='submit' value='Sign up')
+          a.submit-link.submit(href='#') Sign in
+// JS
+script(src='vendor/jquery/jquery.min.js')
+script(src='js_register/main.js')
+// This templates was made by Colorlib (https://colorlib.com)
