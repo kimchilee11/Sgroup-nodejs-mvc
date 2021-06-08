@@ -7,6 +7,12 @@ class Repository {
         })
         return data;
     }
+    async findOneById( id : String ) {
+        let data =await LoginModel.findOne({
+            _id : id,
+        })
+        return data; 
+    }
     async findAll() {
         return await LoginModel.find(x => x);
     }

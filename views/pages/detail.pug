@@ -56,6 +56,10 @@ head
       a(href='pricing.html') Pricing
     li
       a(href='contact.html') Contact
+    form#logout.d-flex.mx-3
+      button.btn.btn-outline-warning(type='submit') Log out
+    form(action='/logout' method='POST')
+              button.btn.btn-danger(type='submit') Log out
   h3.fh5co-lead Connect with us
   p.fh5co-social-icons
     a(href='#')

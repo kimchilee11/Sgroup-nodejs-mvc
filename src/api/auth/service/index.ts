@@ -4,6 +4,7 @@
 // import LoginModel from '../../../model/login';
 import bcrypt from 'bcryptjs';
 import { AuthRepository } from '../repository/index'
+import SessionSchema from '../../../model/session'
 
 class ServiceAuth {
     async login (req : any) {
@@ -34,6 +35,13 @@ class ServiceAuth {
                 message: "Email unvalidate"
             }
         }
+    }
+
+    async logout(idUser : String) {
+        await SessionSchema.findByIdAndDelete({
+            _id : idUser,
+        });
+        return ;
     }
 
     // async register (data) {

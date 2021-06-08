@@ -1,6 +1,8 @@
 import SessionSchema from '../../../model/session';
 import { Service } from '../service'
 import { Request, Response } from 'express'
+import fetch from 'node-fetch'
+import { userInfo } from 'os';
 
 class Controller {
     /**
@@ -45,6 +47,27 @@ class Controller {
             console.log(error);
             return res.redirect('/error', );
         }
+    }
+
+    logout = async ( req: Request, res: Response) => {
+        const {user} = req.signedCookies;
+        if(user){
+            await fetch('http://127.0.0.1:3000/logout', {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(async () => {
+                await this.service.logout(user);
+                res.clearCookie('user', { path: '/' });
+                return res.status(200).redirect('/');
+            })
+            .catch((err) => {
+                return err;
+            });
+        }
+        else res.redirect('/');
     }
 
     // register = async (req, res) => {

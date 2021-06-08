@@ -5,6 +5,7 @@ import { connection } from './model'
 import {join} from 'path';
 import cookieParser from 'cookie-parser';
 import { authRequired, authNotRequire } from './api/auth/middleware/auth.middleware'
+import { ControllerAuth } from './api/auth/controller/index'
 
 const app = express()
 
@@ -32,6 +33,7 @@ app.get('/login', authNotRequire, (req, res) => {
     return res.render('pages/login.pug');
 });
 
+// app.post('/log', ()=> console.log('hehe'))
 app.get('/',  authRequired , (req, res) => res.render('pages/detail.pug'))
 app.get('/error',  (req, res) => res.render('pages/error.pug'))
 app.get('/register',  (req, res) => res.render('pages/register.pug'))
