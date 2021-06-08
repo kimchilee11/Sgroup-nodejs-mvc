@@ -1,7 +1,7 @@
 import LoginModel from '../../../model/login'
 
 class Repository {
-    async findOne( email) {
+    async findOne( email : String ) {
         let data =await LoginModel.findOne({
             email : email,
         })

@@ -1,6 +1,7 @@
 import SessionSchema from '../../../model/session';
+import { NextFunction, Request, Response } from 'express'
 
-function authRequired (req, res, next) {
+function authRequired (req : Request, res : Response, next : NextFunction) {
         const {user} = req.signedCookies;
         if(!user) return res.redirect('/login');
         else {
@@ -18,7 +19,7 @@ function authRequired (req, res, next) {
         return next();
 }
 
-function authNotRequire (req, res, next) {
+function authNotRequire (req : Request, res : Response, next : NextFunction) {
     const { user } = req.signedCookies;
     if(user) {
         return res.redirect('/');

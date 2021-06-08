@@ -1,15 +1,16 @@
 import SessionSchema from '../../../model/session';
 import { Service } from '../service'
+import { Request, Response } from 'express'
 
 class Controller {
     /**
      * @type {Service}
      */
     service;
-    constructor(service) {
+    constructor(service : any ) {
         this.service = service
     }
-    login = async (req,res) => {
+    login = async (req : Request ,res : Response) => {
         try {
             let info = await this.service.login(req.body);
             switch (info.status) {
@@ -46,14 +47,14 @@ class Controller {
         }
     }
 
-    register = async (req, res) => {
-        try {
-            var state = await this.service.register(req.body);
-            res.send(state);
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    // register = async (req, res) => {
+    //     try {
+    //         var state = await this.service.register(req.body);
+    //         res.send(state);
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
 }
 
 export const ControllerAuth = new Controller(Service);
