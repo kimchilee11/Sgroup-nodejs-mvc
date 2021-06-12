@@ -1,41 +1,22 @@
 doctype html
-//if lt IE 7
-//if IE 7
-//if IE 8
-// [if gt IE 8] <!
-// <![endif]
 head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  title Article &mdash; 
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  meta(name='description' content='Free HTML5 Template by FREEHTML5.CO')
-  meta(name='keywords' content='free html5, free template, free bootstrap, html5, css3, mobile first, responsive')
-  meta(name='author' content='FREEHTML5.CO')
-  meta(property='og:title' content='')
-  meta(property='og:image' content='')
-  meta(property='og:url' content='')
-  meta(property='og:site_name' content='')
-  meta(property='og:description' content='')
-  meta(name='twitter:title' content='')
-  meta(name='twitter:image' content='')
-  meta(name='twitter:url' content='')
-  meta(name='twitter:card' content='')
-  // Place favicon.ico and apple-touch-icon.png in the root directory
+  title Detail
   link(rel='shortcut icon' href='favicon.ico')
   // Google Webfonts
   link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css')
   link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css')
   // Animate.css
-  link(rel='stylesheet' href='css_detail/animate.css')
-  // Icomoon Icon Fonts
-  link(rel='stylesheet' href='css_detail/icomoon.css')
-  // Magnific Popup
-  link(rel='stylesheet' href='css_detail/magnific-popup.css')
-  // Salvattore
-  link(rel='stylesheet' href='css_detail/salvattore.css')
-  // Theme Style
   link(rel='stylesheet' href='css_detail/style.css')
+  link(rel='stylesheet' href='css/animate.css')
+  // Icomoon Icon Fonts
+  link(rel='stylesheet' href='css/icomoon.css')
+  // Magnific Popup
+  link(rel='stylesheet' href='css/magnific-popup.css')
+  // Salvattore
+  link(rel='stylesheet' href='css/salvattore.css')
+  // Theme Style
   // Modernizr JS
   script(src='js/modernizr-2.6.2.min.js')
   // FOR IE9 below
@@ -47,31 +28,22 @@ head
     i.icon-cross
   h1.fh5co-logo
     a.navbar-brand(href='index.html') Hydrogen
+
   ul
-    li.active
-      a(href='index.html') Home
     li
+      a(href='index.html') Home
+    li.active
       a(href='about.html') About
     li
       a(href='pricing.html') Pricing
     li
       a(href='contact.html') Contact
-    form#logout.d-flex.mx-3
-      button.btn.btn-outline-warning(type='submit') Log out
-    form(action='/logout' method='POST')
-              button.btn.btn-danger(type='submit') Log out
   h3.fh5co-lead Connect with us
   p.fh5co-social-icons
-    a(href='#')
-      i.icon-twitter
-    a(href='#')
-      i.icon-facebook
-    a(href='#')
-      i.icon-instagram
-    a(href='#')
-      i.icon-dribbble
-    a(href='#')
-      i.icon-youtube
+    //-   i.icon-facebook
+    //- a(href='#')
+    //-   i.icon-instagram
+    //- a(href='#')
 header#fh5co-header(role='banner')
   .container
     .row
@@ -84,204 +56,28 @@ header#fh5co-header(role='banner')
 #fh5co-main
   .container
     .row
-      #fh5co-board(data-columns='')
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_1.jpg' title='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?')
-              img(src='images/img_1.jpg' alt='Free HTML5 Bootstrap template')
-          .fh5co-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_2.jpg')
-              img(src='images/img_2.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_3.jpg')
-              img(src='images/img_3.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_4.jpg')
-              img(src='images/img_4.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Dolore itaque deserunt sit, at exercitationem delectus, consequuntur quaerat sapiente.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_5.jpg')
-              img(src='images/img_5.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Tempora distinctio inventore, nisi excepturi pariatur tempore sit quasi animi.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_6.jpg')
-              img(src='images/img_6.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Sequi, eaque suscipit accusamus. Necessitatibus libero, unde a nesciunt repellendus!
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_7.jpg')
-              img(src='images/img_7.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Necessitatibus distinctio eos ipsam cum hic temporibus assumenda deleniti, soluta.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_8.jpg')
-              img(src='images/img_8.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Debitis voluptatum est error nulla voluptate eum maiores animi quasi?
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_9.jpg')
-              img(src='images/img_9.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Maxime qui eius quisquam quidem quos unde consectetur accusamus adipisci!
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_21.jpg')
-              img(src='images/img_21.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Deleniti aliquid, accusantium, consectetur harum eligendi vitae quaerat reiciendis sit?
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_10.jpg')
-              img(src='images/img_10.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Incidunt, eaque et. Et odio excepturi, eveniet facilis explicabo assumenda.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_11.jpg')
-              img(src='images/img_11.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Laborum dolores nihil voluptates quas alias distinctio fugiat tempora sit.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_12.jpg')
-              img(src='images/img_12.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Sit, quis nulla amet numquam fugit, in reiciendis laboriosam dolor.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_13.jpg')
-              img(src='images/img_13.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Possimus explicabo voluptatem natus nisi similique ipsa repudiandae? Quibusdam, fuga.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_14.jpg')
-              img(src='images/img_14.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Magni repellendus iusto mollitia, quibusdam facilis incidunt. Sunt, repellat, voluptatem.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_15.jpg')
-              img(src='images/img_15.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Unde iure rerum cupiditate explicabo quam aut vel earum numquam.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_16.jpg')
-              img(src='images/img_16.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Qui nisi error dolorum dolor delectus, alias doloremque perspiciatis nemo.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_18.jpg')
-              img(src='images/img_18.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Neque porro vero cumque natus nam voluptatibus, ratione, commodi labore.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_17.jpg')
-              img(src='images/img_17.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Quisquam quia totam, sit ea maxime sint sed excepturi quod.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_19.jpg')
-              img(src='images/img_19.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Nesciunt non iste ex nemo sapiente eum, provident nam corporis.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_20.jpg')
-              img(src='images/img_20.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Harum repellat labore est cum ipsa, nesciunt neque mollitia adipisci?
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_22.jpg')
-              img(src='images/img_22.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Quos repellendus repudiandae debitis reprehenderit cupiditate cumque accusamus exercitationem, harum.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_23.jpg')
-              img(src='images/img_23.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Sunt numquam itaque delectus, dignissimos dolorem obcaecati vel, atque eos.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_24.jpg')
-              img(src='images/img_24.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_25.jpg')
-              img(src='images/img_25.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Quos repellendus repudiandae debitis reprehenderit cupiditate cumque accusamus exercitationem, harum.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_26.jpg')
-              img(src='images/img_26.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc Sunt numquam itaque delectus, dignissimos dolorem obcaecati vel, atque eos.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_27.jpg')
-              img(src='images/img_27.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_28.jpg')
-              img(src='images/img_28.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_29.jpg')
-              img(src='images/img_29.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.
-        .item
-          .animate-box
-            a.image-popup.fh5co-board-img(href='images/img_30.jpg')
-              img(src='images/img_30.jpg' alt='Free HTML5 Bootstrap template')
-            .fh5co-desc
-              | Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.
-footer#fh5co-footer
-  .container
-    .row.row-padded
-      .col-md-12.text-center
-        p.fh5co-social-icons
-          a(href='#')
-            i.icon-twitter
-          a(href='#')
-            i.icon-facebook
-          a(href='#')
-            i.icon-instagram
-          a(href='#')
-            i.icon-dribbble
-          a(href='#')
-            i.icon-youtube
+      .col-md-8.col-md-offset-2
+        h2 Personal Bio
+        .fh5co-spacer.fh5co-spacer-sm
         p
-          small
-            | &copy; Hydrogen Free HTML5 Template. All Rights Reserved. 
-            br
-            | Designed by: 
-            a(href='http://freehtml5.co/' target='_blank') FREEHTML5.co
-            |  | Images by: 
-            a(href='http://pexels.com' target='_blank') Pexels
+          img.img-rounded.img-responsive(src='images/img_2.jpg' alt='Free HTML5 template by FREEHTML5.co')
+        p
+          | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+        p
+          | The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.
+      form(action='/delete' method='POST')
+              button.btn.btn-danger(type='submit') Delete
 // jQuery
-script(src='js_detail/jquery.min.js')
+script(src='js/jquery.min.js')
 // jQuery Easing
-script(src='js_detail/jquery.easing.1.3.js')
+script(src='js/jquery.easing.1.3.js')
 // Bootstrap
-script(src='js_detail/bootstrap.min.js')
+script(src='js/bootstrap.min.js')
 // Waypoints
-script(src='js_detail/jquery.waypoints.min.js')
+script(src='js/jquery.waypoints.min.js')
 // Magnific Popup
-script(src='js_detail/jquery.magnific-popup.min.js')
+script(src='js/jquery.magnific-popup.min.js')
 // Salvattore
-script(src='js_detail/salvattore.min.js')
+script(src='js/salvattore.min.js')
 // Main JS
-script(src='js_detail/main.js')
+script(src='js/main.js')

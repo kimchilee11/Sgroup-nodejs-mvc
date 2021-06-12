@@ -7,7 +7,7 @@
     "build:babel": "babel ./src --out-dir dist --copy-files",
     "build1": "tsc -p tsconfig.json",
     "start": "node build/index.js",
-    "build&start": "npm run build && node build/index.js",
+    "build:start": "npm run build && node build/index.js",
     "build": "rm -rf ./build && tsc",
     "dev": "nodemon"
   },

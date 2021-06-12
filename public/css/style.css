@@ -205,7 +205,7 @@ body {
   margin-bottom: 1.5em;
   text-transform: uppercase;
 }
-.sub-main-w3 input[type='email'],
+.sub-main-w3 input[type='text'],
 .sub-main-w3 input[type='password'] {
   outline: none;
   font-size: 0.9em;
@@ -376,7 +376,7 @@ span.icon2 {
 @media (max-width: 640px) {
 }
 @media (max-width: 600px) {
-  .sub-main-w3 input[type='email'],
+  .sub-main-w3 input[type='text'],
   .sub-main-w3 input[type='password'] {
     padding: 0.9em 3em 0.9em 1em;
   }
@@ -425,7 +425,7 @@ span.icon2 {
   }
 }
 @media (max-width: 414px) {
-  .sub-main-w3 input[type='email'],
+  .sub-main-w3 input[type='text'],
   .sub-main-w3 input[type='password'] {
     font-size: 0.85em;
   }
@@ -440,7 +440,7 @@ span.icon2 {
   }
 }
 @media (max-width: 384px) {
-  .sub-main-w3 input[type='email'],
+  .sub-main-w3 input[type='text'],
   .sub-main-w3 input[type='password'] {
     font-size: 0.8em;
   }
@@ -485,7 +485,7 @@ span.icon2 {
     margin: 4.2em auto 4.5em;
     width: 81%;
   }
-  .sub-main-w3 input[type='email'],
+  .sub-main-w3 input[type='text'],
   .sub-main-w3 input[type='password'] {
     width: 80%;
   }

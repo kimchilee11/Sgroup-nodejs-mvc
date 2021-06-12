@@ -5,7 +5,8 @@ import { connection } from './model'
 import {join} from 'path';
 import cookieParser from 'cookie-parser';
 import { authRequired, authNotRequire } from './api/auth/middleware/auth.middleware'
-import { ControllerAuth } from './api/auth/controller/index'
+import { ControllerAuth } from './api/auth/controller/auth.controller'
+import { ArticleRepository } from './api/articles/repository/articles.repository';
 
 const app = express()
 
@@ -32,11 +33,17 @@ app.use('/', api )
 app.get('/login', authNotRequire, (req, res) => {
     return res.render('pages/login.pug');
 });
-
-// app.post('/log', ()=> console.log('hehe'))
-app.get('/',  authRequired , (req, res) => res.render('pages/detail.pug'))
-app.get('/error',  (req, res) => res.render('pages/error.pug'))
 app.get('/register',  (req, res) => res.render('pages/register.pug'))
+
+app.get('/',  authRequired , async (req, res) => {
+    const articles = await ArticleRepository.findAll();
+    const arr = [1, 2,3,4];
+    res.render('pages/articles.pug', {
+        articles
+    });
+});
+
+app.get('/error',  (req, res) => res.render('pages/error.pug'))
 
 app.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`)
