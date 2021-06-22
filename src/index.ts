@@ -28,7 +28,13 @@ app.use(express.static(PUBLIC_PATH, {
 }));
 
 connection();
+
+app.get('/articles/new', (req, res , next)=>{
+    return res.render('pages/newArticle.pug');
+})
+
 app.use('/', api )
+
 
 app.get('/login', authNotRequire, (req, res) => {
     return res.render('pages/login.pug');
@@ -37,7 +43,6 @@ app.get('/register',  (req, res) => res.render('pages/register.pug'))
 
 app.get('/',  authRequired , async (req, res) => {
     const articles = await ArticleRepository.findAll();
-    const arr = [1, 2,3,4];
     res.render('pages/articles.pug', {
         articles
     });

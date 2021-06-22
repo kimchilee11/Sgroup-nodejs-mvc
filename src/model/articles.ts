@@ -15,6 +15,6 @@ const ArticleSchema = new Schema({
 //     this.updatedAt = Date.now();
 // });
 
-const ArticleModel = model('detail', ArticleSchema);
+const ArticleModel = model('article', ArticleSchema);
 
 export default ArticleModel;

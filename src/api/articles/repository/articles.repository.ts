@@ -4,13 +4,15 @@ class Repository {
     async findAll() {
         return await ArticleModel.find(x => x);
     }
-    async create() {
-        return await ArticleModel.create({
-            title: "heloo heloo",
-            slug: "kim chi le",
-            content: "hiiiiii"
-        });
+    async findOneByTitle( title : String ) {
+        let data =await ArticleModel.findOne({
+            title : title,
+        })
+        return data; 
     }
+    // async createOne(data) {
+    //     return await ArticleModel.
+    // }
 }
 
 export const ArticleRepository = new Repository();
