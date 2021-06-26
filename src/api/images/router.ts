@@ -4,27 +4,18 @@ import { ImageController } from './controller/images.controller';
 
 const router = Router();
 const storage = {
-    storage: multer.diskStorage({
-      destination(req, file, cb) {
-        cb(null, "./public/images");
-      },
-      filename(req, file, cb) {
-        cb(null, `${file.fieldname}-${Date.now()}.jpeg`);
-      },
-    }),
-    limits: {
-      fileSize: 5 * 1024 * 1024,
+  storage: multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, `${process.cwd()}/src/upload`);
     },
-    // fileFilter(req, file, callback) {
-    //   if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
-    //     return callback(null, true);
-    // }
-        // return callback({ message: "Unsupported file format" }, false);
-    // },
-  };
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '.jpg');
+    },
+  })
+}
 
 const upload = multer(storage);
 
 router.post('/', upload.single('file'), ImageController.createOne);
 
-export const image = router;
+export const Image = router;

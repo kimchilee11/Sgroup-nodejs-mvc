@@ -3,23 +3,13 @@ import { Request } from 'express'
 import '../../../config/cloudinary';
 
 class Service {
-    createOne = async (req : any) => {
-        console.log(req.body);
-        
-        try {
-            if (req.body.file == null) {
-                return {
-                   message: "NotFoundException",
-                }
-            }
-            const uploadRes = await cloudinary.v2.uploader.upload(req.body.file);
-            return uploadRes;
-        } catch (err) {
-            console.log(err);
-            return {
-                message: "error",
-            }
+    createOne = async (file?: Express.Multer.File) => {
+        // let file :string = req.file.path;
+        if (file == null) {
+            throw new Error('Null file')
         }
+        // await cloudinary.v2.uploader.upload(file.fieldname);
+        return file;
     }
 }
 

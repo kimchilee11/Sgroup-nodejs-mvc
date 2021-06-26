@@ -1,13 +1,11 @@
-
-document.querySelector("#btn").addEventListener('click', async function(event) {
+document.querySelector("#postArticle").addEventListener('submit', async function(event) {
     event.preventDefault();
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
-    const file = document.getElementById('thumbnail').value;
-    // console.log("kimchilee");
-    // console.log("file"+file);
+    var file = document.getElementById('file').files[0].name;
+    console.log("file");
     try {
-        const response = await fetch('http://localhost:3000/articles/new', {
+        var response = await fetch('http://localhost:3000/articles/new', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -19,11 +17,12 @@ document.querySelector("#btn").addEventListener('click', async function(event) {
                 file
             }),
         });
+        console.log(response);
         if (!response.ok) {
-            alert('Error huhu');
+            alert('Error huhuhuhuhuhuuhuhu');
         } else {
             location.href = '/';
-            console.log(response.body);
+            alert('Register success')
             return;
         }
         

@@ -1,7 +1,7 @@
 extends ../layout/main.pug
 
 block content
-    form(action="/articles/new", method="post")
+    form#postArticle(action="/articles/new", method="post"  encType="multipart/form-data")
         .form-group
             label.form-label Title
             input#title.form-control(type='text' name='title' aria-describedby='emailHelp')
@@ -11,6 +11,8 @@ block content
             textarea#content.form-control(rows='3' name='content')
         .form-group
             label Thumbnail
-            input#thumbnail(type='file' name='thumbnail')
+            input#file(type='file' name='file')
         button#btn.btn.btn-primary(type='submit') Create
+
+
 
