@@ -4,12 +4,10 @@ import '../../../config/cloudinary';
 
 class Service {
     createOne = async (file?: Express.Multer.File) => {
-        // let file :string = req.file.path;
         if (file == null) {
             throw new Error('Null file')
         }
-        // await cloudinary.v2.uploader.upload(file.fieldname);
-        return file;
+        return await cloudinary.v2.uploader.upload(file.path);
     }
 }
 

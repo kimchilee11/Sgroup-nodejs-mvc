@@ -3,6 +3,7 @@ document.querySelector("#postArticle").addEventListener('submit', async function
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
     var file = document.getElementById('file').files[0].name;
+    // file = path
     console.log("file");
     try {
         var response = await fetch('http://localhost:3000/articles/new', {
