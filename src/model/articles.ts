@@ -4,6 +4,8 @@ const ArticleSchema = new Schema({
     title: String,
     content: String,
     slug: String,
+    urlImg: String,
+    file: String,
     createdAt: {
         type: Date
     }

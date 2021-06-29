@@ -1,5 +1,4 @@
 import cloudinary from 'cloudinary'
-import { Request } from 'express'
 import '../../../config/cloudinary';
 
 class Service {

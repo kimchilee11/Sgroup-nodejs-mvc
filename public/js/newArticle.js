@@ -2,9 +2,8 @@ document.querySelector("#postArticle").addEventListener('submit', async function
     event.preventDefault();
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
+    const urlImg = document.getElementById('previewImg').src;
     var file = document.getElementById('file').files[0].name;
-    // file = path
-    console.log("file");
     try {
         var response = await fetch('http://localhost:3000/articles/new', {
             method: 'POST',
@@ -15,7 +14,8 @@ document.querySelector("#postArticle").addEventListener('submit', async function
             body: JSON.stringify({
                 title,
                 content,
-                file
+                file,
+                urlImg
             }),
         });
         console.log(response);

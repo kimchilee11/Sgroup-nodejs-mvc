@@ -49,7 +49,7 @@ head
     a.navbar-brand(href='index.html') Hydrogen
   ul
     li.active
-      a(href='index.html') Home
+      a(href='/articles/new') New Article 
     li
       a(href='about.html') About
     li
@@ -87,9 +87,9 @@ header#fh5co-header(role='banner')
       #fh5co-board(data-columns='')
         .item
           .animate-box
-            each article, index in articles
-              a.image-popup.fh5co-board-img(href='images/img_12.jpg')
-                img(src='images/img_'+index+'.jpg')
+            each article in articles
+              a.image-popup.fh5co-board-img(href='images/img_11.jpg')
+                img(src=`${article.urlImg}`)
                 p 
                   a(href=`http://localhost:3000/articles/${article.slug}`)
                     strong #{article.title}

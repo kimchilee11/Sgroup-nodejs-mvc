@@ -8,11 +8,10 @@ import { register, ILoginDto } from '../dto/register.dto';
 class ServiceAuth {
     async login (req : ILoginDto) {
         const { email  , password } = req;
-        let token;
-        let data = await AuthRepository.findOne(email);
+        const data = await AuthRepository.findOne(email);
         if(data) {
-            let x= await bcrypt.compare(password, data.password);
-            if(x) {
+            const temp = await bcrypt.compare(password, data.password);
+            if(temp) {
                 return {
                     status: 200,
                     _id: data._id
@@ -33,7 +32,7 @@ class ServiceAuth {
         }
     }
 
-    async logout(idUser : String) {
+    async logout(idUser : string) {
         await SessionSchema.findByIdAndDelete({
             _id : idUser,
         });
@@ -41,9 +40,9 @@ class ServiceAuth {
     }
 
     async register (data : register ) {
-        let dto = new RegisterDto(data);
+        const dto = new RegisterDto(data);
         const salt = await bcrypt.genSalt(10);
-        let str : string = data.password;
+        const str : string = data.password;
         dto.password = await bcrypt.hash(str , salt);
         const userIsExist = await AuthRepository.findOne(data.email);
         if(!userIsExist) {

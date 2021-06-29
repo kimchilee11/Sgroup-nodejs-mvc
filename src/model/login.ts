@@ -1,7 +1,6 @@
 import { model, Schema } from 'mongoose';
-import bcrypt from 'bcryptjs';
 
-var LoginSchema = new Schema({
+const LoginSchema = new Schema({
         email: String,
         password: String,
         address: String,

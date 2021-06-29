@@ -5,7 +5,6 @@ import { connection } from './model'
 import {join} from 'path';
 import cookieParser from 'cookie-parser';
 import { authRequired, authNotRequire } from './api/auth/middleware/auth.middleware'
-import { ControllerAuth } from './api/auth/controller/auth.controller'
 import { ArticleRepository } from './api/articles/repository/articles.repository';
 
 const app = express()
@@ -29,9 +28,9 @@ app.use(express.static(PUBLIC_PATH, {
 
 connection();
 
-app.get('/articles/new', (req, res , next)=>{
-    return res.render('pages/newArticle.pug');
-})
+// app.get('/articles/new', (req, res , next)=>{
+//     return res.render('pages/newArticle.pug');
+// })
 
 app.use('/', api )
 

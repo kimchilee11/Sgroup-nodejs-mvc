@@ -1,8 +1,8 @@
 export interface register {
-    email: String,
+    email: string,
     password: string,
-    address: String,
-    phoneNumber: String
+    address: string,
+    phoneNumber: string
 }
 
 export interface ILoginDto {

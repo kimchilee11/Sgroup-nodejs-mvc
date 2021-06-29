@@ -1,22 +1,20 @@
 import LoginModel from '../../../model/login'
 
 class Repository {
-    async findOne( email : String ) {
-        let data =await LoginModel.findOne({
+    async findOne( email : string ) {
+        const data =await LoginModel.findOne({
             email : email,
         })
         return data;
     }
-    async findOneById( id : String ) {
-        let data =await LoginModel.findOne({
+    async findOneById( id : string ) {
+        const data =await LoginModel.findOne({
             _id : id,
         })
         return data; 
     }
     async findAll() {
         return await LoginModel.find(x => x);
-    }
-    async remove() {
     }
 }
 

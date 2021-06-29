@@ -1,11 +1,10 @@
 import { ImageService } from "../service/images.service";
-import { NextFunction, Request, Response } from 'express';
+import { Request, Response } from 'express';
 
 class Controller {
-    createOne = async (req : Request, res : Response , next : NextFunction) => {
+    createOne = async (req : Request, res : Response ) => {
         try {
             const path = await ImageService.createOne(req.file);
-            console.log(path);
             return res.status(200).json({
                 src: path.secure_url
             })

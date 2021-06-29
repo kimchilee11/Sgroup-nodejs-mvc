@@ -5,7 +5,7 @@ import { ArticleRepository } from "../repository/articles.repository";
 
 class Service {
     async createOne (data : IArticleDto) {
-        let titleExist : string = await ArticleRepository.findOneByTitle(data.title);
+        const titleExist : string = await ArticleRepository.findOneByTitle(data.title);
         data.slug = slugify(data.title);
         
         console.log(data);

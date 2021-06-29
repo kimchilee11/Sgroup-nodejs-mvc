@@ -1,10 +1,8 @@
+/* eslint-disable no-case-declarations */
 import SessionSchema from '../../../model/session';
 import { Service } from '../service/auth.validator'
 import { Request, Response } from 'express'
 import fetch from 'node-fetch'
-import { userInfo } from 'os';
-import { RegisterDto } from '../dto/register.dto';
-import LoginModel from '../../../model/login';
 
 class Controller {
     /**
@@ -12,12 +10,10 @@ class Controller {
      */
     login = async (req : Request ,res : Response) => {
         try {
-            let info = await Service.login(req.body);
+            const info = await Service.login(req.body);
             switch (info.status) {
                 case 200:
-                    const IsExistSession =await SessionSchema.findOne({
-                        _id : info._id
-                    })
+                    const IsExistSession =await SessionSchema.findOne({_id : info._id})
                     if(!IsExistSession){
                             res.cookie('user', info._id, {
                                 httpOnly: true,
@@ -70,7 +66,7 @@ class Controller {
 
     register = async (req : Request, res : Response) => {
         try {
-            let state = await Service.register(req.body);
+            await Service.register(req.body);
             return res.redirect('/');
         } catch (error) {
             console.log(error);
