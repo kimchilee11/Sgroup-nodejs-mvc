@@ -51,33 +51,28 @@ header#fh5co-header(role='banner')
         a.fh5co-menu-btn.js-fh5co-menu-btn(href='#')
           | Menu 
           i.icon-menu
-        a.navbar-brand(href='index.html') Hydrogen
+        //- a.navbar-brand(href='index.html') Hydrogen
 // END .header
 #fh5co-main
   .container
     .row
       .col-md-8.col-md-offset-2
-        h2 Personal Bio
-        .fh5co-spacer.fh5co-spacer-sm
-        p
-          img.img-rounded.img-responsive(src='images/img_2.jpg' alt='Free HTML5 template by FREEHTML5.co')
-        p
-          | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-        p
-          | The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.
-      form(action='/delete' method='POST')
-              button.btn.btn-danger(type='submit') Delete
-// jQuery
-script(src='js/jquery.min.js')
-// jQuery Easing
-script(src='js/jquery.easing.1.3.js')
-// Bootstrap
-script(src='js/bootstrap.min.js')
-// Waypoints
-script(src='js/jquery.waypoints.min.js')
-// Magnific Popup
-script(src='js/jquery.magnific-popup.min.js')
-// Salvattore
-script(src='js/salvattore.min.js')
-// Main JS
-script(src='js/main.js')
+        div.box#square
+                a.image-popup.fh5co-board-img
+                  img(src=`${article.urlImg}` style="height: 400px")
+                  p
+                    a#title(href=`http://localhost:3000/articles/${article.slug}`)
+                      strong #{article.title}
+                    p #{article.content}
+                button#btnDel.btn.btn-danger(type='click') DELETE
+                button#btnUpdate.btn.btn-danger(type='click') UPDATE
+        //- div.box#square
+        //-   h2 Personal Bio
+        //-   .fh5co-spacer.fh5co-spacer-sm
+        //-   p
+        //-     img.img-rounded.img-responsive(src=`${article.urlImg}` style="height: 400px")
+        //-   p 
+        //-     strong #{article.title}
+        //-   p #{article.content}
+        //-   button#btnDel.btn.btn-danger(type='click') DELETE
+  script(src='/js/articles.js')

@@ -1,7 +1,7 @@
 extends ../layout/main.pug
 
 block content
-    form#postArticle(action="/articles/new", method="post"  encType="multipart/form-data")
+    form#postArticle(method="post"  encType="multipart/form-data")
         .form-group
             label.form-label Title
             input#title.form-control(type='text' name='title' aria-describedby='emailHelp')

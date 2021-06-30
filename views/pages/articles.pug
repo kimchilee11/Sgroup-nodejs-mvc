@@ -88,13 +88,16 @@ header#fh5co-header(role='banner')
         .item
           .animate-box
             each article in articles
-              a.image-popup.fh5co-board-img(href='images/img_11.jpg')
-                img(src=`${article.urlImg}`)
-                p 
-                  a(href=`http://localhost:3000/articles/${article.slug}`)
-                    strong #{article.title}
-                  p #{article.content}
-footer#fh5co-footer
+              div.box#square
+                a.image-popup.fh5co-board-img
+                  img(src=`${article.urlImg}` style="height: 400px")
+                  p
+                    a#title(href=`http://localhost:3000/articles/${article.slug}`)
+                      strong #{article.title}
+                    p #{article.content}
+                    //- form(action=`/articles/${article.slug}` method='DELETE')
+                button#btnDel.btn.btn-danger(type='click') DELETE
+                button#btnUpdate.btn.btn-danger(type='click') UPDATE
   .container
     .row.row-padded
       .col-md-12.text-center
@@ -131,3 +134,4 @@ script(src='js_detail/jquery.magnific-popup.min.js')
 script(src='js_detail/salvattore.min.js')
 // Main JS
 script(src='js_detail/main.js')
+script(src='/js/articles.js')
